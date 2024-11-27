@@ -3,7 +3,8 @@
     font-family: verdana;
 }
 body {
-    background: url(./wallpaperflare.com_wallpaper\ \(3\).jpg);
+    background: url(./0696bc71f853a48671e5c02a844475b9.jpg);
+    background-size: cover;
     color: white;
 }
 .container {
@@ -100,6 +101,10 @@ button:hover {
 }
 
 @media only screen and (min-width: 900px) {
+    body {
+    background: url(./wallpaperflare.com_wallpaper\ \(3\).jpg);
+    background-position: 100%;
+    }
     .container {
         width: 30%;
     }
