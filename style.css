@@ -1,0 +1,106 @@
+* {
+    margin: 0;padding: 0;
+    font-family: verdana;
+}
+body {
+    background: url(./wallpaperflare.com_wallpaper\ \(3\).jpg);
+    color: white;
+}
+.container {
+    padding: 30px;
+    position: relative;
+    width: 38%;
+    margin: auto;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.container::before {
+    position: absolute;
+    content: '';
+    z-index: -1;
+    height: 200%;
+    width: 200%;
+    border-radius: 10px;
+    background: repeating-conic-gradient(#e8ffe8, #109884, #187e84, #05a8bd, #e8ffe8);
+    animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.container::after {
+    border-radius: 10px;
+    position: absolute;
+    content: '';
+    z-index: -1;
+    height: 95%;
+    background-color: rgb(3, 122, 122);
+    width: 95%;
+    filter: blur(3px);
+}
+input:nth-child(1) {
+    position: absolute;
+    top: 20%;
+    height: 20px;
+    width: 85%;
+    font-size: 11px;
+}
+.hold {
+    width: 100%;
+    position: relative;
+    margin-top: -20%;
+}
+.hold input {
+    color: lightblue;
+    padding: 3px;
+    font-size: 18px;
+    position: relative;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #c6fac6;
+    width: 100%;
+}
+input:focus {
+    outline: none;
+}
+label {
+    font-size: 13px;
+    position: absolute;
+    top: 25%;
+    left: 1%;
+}
+.hold input:focus ~ label, .hold input:valid ~ label {
+    transition: .5s ease;
+    font-size: 10px;
+    top: -40%;
+}
+button {
+    position: absolute;
+    top: 60%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #03e7c5;
+}
+button:hover {
+    box-shadow: 0 0 15px #edede9b6;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 900px) {
+    .container {
+        width: 30%;
+    }
+}
